@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/scripts/orders.js"></script>
+</head>
+
+<body class=" bg-[#f1f7ff]">
+    <button
+        class="active:translate-x-1 active:translate-y-1 bg-red-600 cursor-pointer duration-200 fixed flex group h-11 hover:rounded-lg hover:w-32 items-center justify-start ml-[93%] mt-[25%] overflow-hidden rounded-full shadow-lg transition-all w-11">
+        <div
+            class="flex items-center justify-center w-full transition-all duration-300 group-hover:justify-start group-hover:px-3">
+            <svg class="w-4 h-4" viewBox="0 0 512 512" fill="white">
+                <path
+                    d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
+                </path>
+            </svg>
+        </div>
+        <div
+            class="absolute right-5 transform translate-x-full opacity-0 text-white text-lg font-semibold transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+            Omitir
+        </div>
+    </button>
+    <section class="py-16 bg-gray-50 overflow-hidden">
+        <div class="container px-4 mx-auto">
+            <div class="flex flex-wrap items-center -mx-4 mb-16">
+                <div class="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
+                    <div class="max-w-lg mx-auto">
+                        <span class="text-sm font-semibold uppercase">
+                            <span>Disfruta tu comida en</span>
+                            <span class="text-blue-500">icaro</span>
+                        </span>
+                        <h2 class="font-heading text-3xl sm:text-4xl mt-2 mb-6">RESERVACION
+                        </h2>
+                        <p class="max-w-xl mx-auto text-lg leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Pellentesque massa nibh, pulvinar vitae aliquet nec.</p>
+                    </div>
+                </div>
+                <div class="w-[632px] lg:w-1/2 px-4" id="slider-container">
+                    <img class="slider-image block mx-auto"
+                        src="https://www.lokaeats.com/wp-content/uploads/2021/03/feat-3.jpg" alt="">
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full lg:w-1/3 px-4 mb-10 lg:mb-0"></div>
+                <div class="w-full lg:w-1/3 px-4 mb-10 lg:mb-0"></div>
+                <div class="w-full lg:w-1/3 px-4"></div>
+            </div>
+        </div>
+    </section>
+    <div class="container mx-auto">
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://brandemia.org/contenido/subidas/2022/10/marca-mcdonalds-logo.png" alt=""
+                        class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-wide">MC DONALD'S</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('McDonalds')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md  mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://brandemia.org/contenido/subidas/2021/12/bk_rebrand_stills_vi_1_logo.jpg" alt=""
+                        class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-wide">BURGER KING</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('BurgerKing')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://logowik.com/content/uploads/images/dominos-pizza5190.jpg" alt=""
+                        class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-wide">DOMINO'S PIZZA</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('DominosPizza')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://cdn.logoworks.com/wp-content/uploads/2017/06/Untitled-2-640x360-1.png" alt=""
+                        class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-wide">STARBUCKS</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('Starbucks')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://bulevar.com.co/wp-content/uploads/2023/07/Frisby.jpg" alt=""
+                        class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-wide">FRISBY</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('Frisby')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://www.mambogota.com/wp-content/uploads/2018/05/logo-Crepes-Waffles-01.png" alt=""
+                        class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold">CREPES & WAFFLES</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('CrespesWaffles')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://brandemia.org/sites/default/files/inline/images/taco_bell_logo.jpg" alt=""
+                        class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-wide">TACO BELL</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('TacoBell')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://www.getfused.com/wp-content/uploads/2021/08/LSF-Thumbnail_576x424.png" alt=""
+                        class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-wide">LEGAL SEA FOODS</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('LegalSea')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://i.pinimg.com/1200x/9e/2d/d1/9e2dd1e44d3ffc9f13b416405c8c60b4.jpg" alt=""
+                        class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-wide">PANDA EXPRESS</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('PandaExpress')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://lh6.googleusercontent.com/e4S_9ZLu6AfTLXmCu3m5U0oBVClPIBR1oFnd8cEV_kyZTWGxEVJndyrhhEzHL4MkAunYRQeeTz1HA8EvCoi4iqMyV7yRE_1kOiqyPxImjzaCVjNUElUHTLxMDT8K13fud2AsaHbM"
+                        alt="" class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-wide">DUNKIN DONUTS</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('DunkinDonuts')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+                    <img src="https://1000marcas.net/wp-content/uploads/2020/01/KFC-logo-2006.jpg" alt=""
+                        class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                    <div class="flex flex-col justify-between p-6 space-y-8">
+                        <div class="space-y-2">
+                            <h2 class="text-3xl font-semibold tracking-wide">KFC</h2>
+                            <p class="dark:text-gray-800">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum
+                                eget.</p>
+                        </div>
+                        <button type="button" onclick="openModal('KfC')"
+                            class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md mt-4 px-4 py-2 bg-blue-500 text-white  text-center  hover:bg-blue-600">Reservar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal fixed inset-0 overflow-y-auto px-4 py-6">
+            <div class="relative max-w-sm mx-auto mt-6 p-6 bg-white shadow-md rounded-md">
+                <span class="absolute top-0 right-0 mr-4 mt-4 cursor-pointer text-gray-500 text-3xl"
+                    onclick="closeModal()">&times;</span>
+                <div id="modal-container"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto mt-16 mb-16">
+            <section class="dark:bg-gray-100 dark:text-gray-800">
+                <div class="container flex flex-col mx-auto lg:flex-row mb-24">
+                    <div class="w-full lg:w-1/3"
+                        style="background-image: url('/assets/images/logo-icaro1.png'); background-position: center center; background-size: cover;">
+                    </div>
+                    <div class="flex flex-col w-full p-6 lg:w-2/3 md:p-8 lg:p-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-8 h-8 mb-8 dark:text-violet-600">
+                            <path fill-rule="evenodd"
+                                d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <h2 class="text-3xl font-semibold leading-none">Modern solutions to all kinds of problems</h2>
+                        <p class="mt-4 mb-8 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                            voluptatum
+                            rem amet!</p>
+                        <div class="flex space-x-4">
+                            <a
+                                class="flex flex-col text-lg font-medium rounded-3xl px-4 py-2 bg-blue-500 text-white text-center">Get
+                                started</a>
+                            <a
+                                class="flex flex-col text-lg font-medium rounded-3xl px-4 py-2 bg-blue-500 text-white text-center">Get
+                                started</a>
+                            <a
+                                class="flex flex-col text-lg font-medium rounded-3xl px-4 py-2 bg-blue-500 text-white text-center">Get
+                                started</a>
+                        </div>
+                    </div>
+            </section>
+        </div>
+
+        <section class="fixed bottom-0 left-0 w-full p-4 bg-blue-300 mt-16">
+            <div class="container px-4 mx-auto">
+                <ul class="flex flex-wrap items-center mb-10 xl:mb-0 xl:mt-[-50px]">
+                    <li class="mr-6"></li>
+                    <li class="mr-6"></li>
+                </ul>
+                <div class="pb-9 mb-7 text-center border-b border-black border-opacity-5"></div>
+                <div class="lg:flex xl:items-center">
+                    <div class="mb-10 xl:mb-0 lg:w-2/12 xl:w-1/12">
+                        <h3 class="text-xl font-heading font-medium">Reservas</h3>
+                    </div>
+                    <div class="sm:flex sm:flex-wrap lg:justify-end lg:w-10/12 xl:w-11/12">
+                        <div class="sm:pr-3 lg:px-3 mb-6 xl:mb-0 w-full sm:w-1/2 lg:w-4/12 xl:w-3/12">
+                            <div
+                                class="relative flex items-center justify-between py-4 px-10 leading-8 bg-white bg-opacity-50 font-medium rounded-3xl">
+                                <div
+                                    class="absolute left-3 flex justify-center items-center w-20 h-20 bg-white rounded-full">
+                                    <div
+                                        class="flex justify-center items-center w-11 h-11 text-xl text-white font-bold bg-blue-500 rounded-full">
+                                        3</div>
+                                </div>
+                                <span class="ml-16">Products</span>
+                            </div>
+                        </div>
+                        <div class="sm:pr-3 lg:px-3 mb-10 sm:mb-0 w-full sm:w-1/2 lg:w-4/12 xl:w-3/12">
+                            <div
+                                class="flex items-center justify-between py-4 px-10 leading-8 bg-white font-heading font-medium rounded-3xl">
+                                <span>Total</span>
+                                <span class="flex items-center text-blue-500">
+                                    <span class="mr-3 text-sm">$</span>
+                                    <span class="text-xl">720,70</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="sm:pl-3 w-full sm:w-1/2 lg:max-w-max lg:ml-auto xl:ml-0">
+                            <a class="block py-5 px-10 w-full text-xl leading-6 font-medium tracking-tighter font-heading text-center text-white bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl"
+                                href="#">Finalizar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+</body>
+
+</html>

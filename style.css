@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header {
+    box-shadow: 0px 1px 10px 6px rgb(20, 20, 20);
+    background: linear-gradient(337deg, rgb(20, 20, 20) 60%, rgb(20, 20, 20) 88%, rgb(20, 20, 20) 40%, rgba(255, 179, 80, 0.962) 48%);
+    color: #f9f9f9ba;
+    padding: 27px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+footer {
+    box-shadow: 0px 1px 10px 6px rgb(20, 20, 20);
+    background: linear-gradient(120deg, rgb(20, 20, 20) 60%, rgb(20, 20, 20) 88%, rgb(20, 20, 20) 40%, rgba(255, 179, 80, 0.908) 48%);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+}

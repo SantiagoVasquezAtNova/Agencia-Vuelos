@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-base m-0 p-0 relative w-full h-full font-sans bg-[#282828]">
+    <section
+        class="bg-[#222222af] border-2 border-[#FEFCF0] flex flex-col justify-around m-auto mt-20 mt-25 pt-8 px-7 py-7 rounded-[40px] text-white w-[400px]">
+        <div class="flex justify-between items-center mb-5">
+            <img class="w-[100px] h-auto max-w-full" src="/assets/images/fondo.png" alt="">
+            <h1 class="pl-18 text-4xl text-[#B65506] w-[190px]">Log in</h1>
+        </div>
+        <form class="flex flex-col" id="login">
+            <input type="text"
+                class="bg-transparent rounded-md border-2 border-[#fefcf077] text-base mb-5 px-5 h-12 text-[#FEFCF0]"
+                placeholder="Email" id="correo">
+            <input type="password"
+                class="bg-transparent rounded-lg border-2 border-[#fefcf077] text-base px-5 py-2 h-12 text-[#FEFCF0]"
+                placeholder="Password" id="confirmpassword">
+            <div class="relative left-[90%] bottom-6 transform -translate-y-1/2 cursor-pointer w-22">
+                <span class="password-eye">
+                    <i class="fas fa-eye"></i>
+                </span>
+            </div>
+            <a class="hover:text-orange-600 no-underline text-sm text-white" href="./forgot.html">I forgot my
+                password</a>
+            <button
+                class="bg-[#b65506a7] cursor-pointer font-sans mb-[-30px] mt-10 px-8 py-4 rounded-full text-white hover:bg-[#b65506ed]"
+                id="boton">Continue</button>
+            <div class="flex justify-around mt-[60px] text-white">
+                <a class="hover:text-orange-600" href="register.html">Register</a>
+            </div>
+        </form>
+    </section>
+    <script src="/scripts/login.js"></script>
+</body>
+
+</html>

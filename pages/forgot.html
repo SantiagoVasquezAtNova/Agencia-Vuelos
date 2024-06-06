@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-base m-0 p-0 relative w-full h-full font-sans bg-[#282828]">
+    <section class="bg-gray-900 bg-opacity-70 border-2 border-solid border-white flex flex-col justify-between mb-20 mt-30 mt-[80px] mx-auto px-8 py-8 rounded-3xl text-gray-300 w-[400px]">
+        <div class="flex items-center justify-between mb-[20px]">
+            <img class="h-auto max-w-full w-[90px]" src="/assets/images/fondo.png" alt="">
+            <h1 class="text-3xl text-[#B65506] w-full">Forgot password?</h1>
+        </div>
+        <p class="mb-6 text-center text-gray-300">Enter your registered email address below, and we will send you a link to reset your password.</p>
+        <form class="flex flex-col mt-[-1px]" id="forgot">
+            <input type="text" class="bg-transparent rounded-lg border-2 border-[#fefcf077] text-base px-5 py-2 h-12 text-[#FEFCF0]" placeholder="Email" id="correo">
+            <div class="mb-6 text-center">
+                <button class="bg-[#b65506a7] cursor-pointer hover:bg-[#b65506eb] m-[10px] mb-6 mt-10 px-8 py-4 rounded-full text-white" id="botonc">Cancel</button>
+                <button class="bg-[#b65506a7] cursor-pointer hover:bg-[#b65506eb] m-[10px] mb-6 mt-10 px-8 py-4 rounded-full text-white" id="boton">Submit</button>
+            </div>
+            <p class="text-center">All rights reserved.2024</p>
+        </form>
+    </section>
+    <script src="/scripts/forgot.js"></script>
+</body>
+
+</html>
